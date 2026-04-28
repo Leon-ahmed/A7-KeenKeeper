@@ -1,0 +1,24 @@
+body {
+ 
+	width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+ 
+}
+
+.text-green-primary{
+
+  color: #244D3F;
+}
+.bg-green-primary{
+
+  background-color: #244D3F;
+}
+
+ .text-black{
+  color: #1F2937;
+ }
+
+ .text-gray{
+  color: #64748B;
+ }
