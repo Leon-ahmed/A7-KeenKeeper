@@ -1,0 +1,1 @@
+export const friendDataPromise = fetch('/data.json').then((res) => res.json())
