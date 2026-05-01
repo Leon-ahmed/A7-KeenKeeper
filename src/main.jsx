@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home.jsx'
 import FriendDetails from './Pages/FriendDetails/FriendDetails.jsx'
 import Timeline from './Pages/Timeline/Timeline.jsx'
 import Stats from './Pages/Stats/Stats.jsx'
+import NotFound from './Pages/NotFound/NotFound.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         element: <FriendDetails />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ])
 
