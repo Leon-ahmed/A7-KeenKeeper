@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { friendDataPromise } from '../../data/friendData'
+import { addTimelineEvent } from '../../data/timelineEvents'
 import call from '../../assets/call.png'
 import txt from '../../assets/text.png'
 import vdo from '../../assets/video.png'
@@ -14,9 +15,20 @@ function DetailContent() {
   const { id } = useParams()
   const friend = friends.find((item) => String(item.id) === id)
 
-  const notifyCall = () => toast(`Calling ${friend.name}`)
-  const notifyText = () => toast(`Texting ${friend.name}`)
-  const notifyVideo = () => toast(`Video call with ${friend.name}`)
+  const notifyCall = () => {
+    addTimelineEvent('call', friend.name)
+    toast(`Calling ${friend.name}`)
+  }
+
+  const notifyText = () => {
+    addTimelineEvent('text', friend.name)
+    toast(`Texting ${friend.name}`)
+  }
+
+  const notifyVideo = () => {
+    addTimelineEvent('video', friend.name)
+    toast(`Video call with ${friend.name}`)
+  }
 
   if (!friend) {
     return (

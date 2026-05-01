@@ -1,8 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { RiHome2Line } from "react-icons/ri";
 import { FaRegClock } from "react-icons/fa6";
 import { ImStatsDots } from "react-icons/im";
 const Navbar = () => {
+        const navLinkClass = ({ isActive }) =>
+                `flex items-center gap-1 px-4 py-3 rounded-md transition-colors duration-200 ${
+                        isActive
+                                ? 'bg-green-primary text-white shadow-sm'
+                                : 'text-gray hover:bg-slate-100 hover:text-[#244D3F]'
+                }`
+
     return (
         <div>
             <div class="px-10 py-4 flex flex-col md:flex-row navbar space-y-3 bg-base-100 shadow-sm">
@@ -11,8 +18,18 @@ const Navbar = () => {
                         </div>
           <div>
                   <ul class="flex flex-col w-6/12 mx-auto   md:flex-row md:w-full   gap-2   menu menu-horizontal px-1">
-                      <li className='flex items-center gap-1 text-gray bg-green-primary px-4 py-3 rounded-md'><RiHome2Line /><Link to="/">Home</Link></li>
-                       <li className='flex items-center gap-1 text-gray px-4 py-3'><FaRegClock /><a>Timeline</a></li>
+                                            <li>
+                                                <NavLink to="/" end className={navLinkClass}>
+                                                    <RiHome2Line />
+                                                    <span>Home</span>
+                                                </NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink to="/timeline" className={navLinkClass}>
+                                                    <FaRegClock />
+                                                    <span>Timeline</span>
+                                                </NavLink>
+                                            </li>
                         <li className='flex items-center gap-1 text-gray px-4 py-3'><ImStatsDots /><a>Stats</a></li>
       
                      </ul>
