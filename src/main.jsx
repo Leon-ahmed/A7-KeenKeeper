@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Pages/Home/Home.jsx'
 import FriendDetails from './Pages/FriendDetails/FriendDetails.jsx'
 import Timeline from './Pages/Timeline/Timeline.jsx'
+import Stats from './Pages/Stats/Stats.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: 'timeline',
         element: <Timeline />,
+      },
+      {
+        path: 'stats',
+        element: <Stats />,
       },
       {
         path: 'friends/:id',

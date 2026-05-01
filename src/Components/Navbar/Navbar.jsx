@@ -30,7 +30,12 @@ const Navbar = () => {
                                                     <span>Timeline</span>
                                                 </NavLink>
                                             </li>
-                        <li className='flex items-center gap-1 text-gray px-4 py-3'><ImStatsDots /><a>Stats</a></li>
+                                            <li>
+                                                <NavLink to="/stats" className={navLinkClass}>
+                                                    <ImStatsDots />
+                                                    <span>Stats</span>
+                                                </NavLink>
+                                            </li>
       
                      </ul>
              </div>
