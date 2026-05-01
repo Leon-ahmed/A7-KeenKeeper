@@ -30,6 +30,6 @@ Managing friendships in today's busy world can be challenging. KeenKeeper makes 
 ### 2. **Friend Management Dashboard**
 
 
-### 3. ** Analytics**
+### 3. **Analytics**
 
 
